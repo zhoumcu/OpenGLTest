@@ -1,11 +1,5 @@
 package org.andresoviedo.app.model3D.controller;
 
-import org.andresoviedo.app.model3D.model.Object3DData;
-import org.andresoviedo.app.model3D.services.SceneLoader;
-import org.andresoviedo.app.model3D.view.ModelRenderer;
-import org.andresoviedo.app.model3D.view.ModelSurfaceView;
-import org.andresoviedo.app.util.math.Math3DUtils;
-
 import android.graphics.PointF;
 import android.opengl.GLU;
 import android.opengl.Matrix;
@@ -15,6 +9,12 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+
+import org.andresoviedo.app.model3D.model.Object3DData;
+import org.andresoviedo.app.model3D.services.SceneLoader;
+import org.andresoviedo.app.model3D.view.ModelRenderer;
+import org.andresoviedo.app.model3D.view.ModelSurfaceView;
+import org.andresoviedo.app.util.math.Math3DUtils;
 
 public class TouchController {
 
@@ -188,17 +188,19 @@ public class TouchController {
 			selectObjectImpl(hit1, hit2);
 		}
 
-
 		int max = Math.max(mRenderer.getWidth(), mRenderer.getHeight());
 		if (touchDelay > 1) {
 			// INFO: Procesar gesto
 			if (pointerCount == 1 && currentPress1 > 4.0f) {
 			} else if (pointerCount == 1) {
 				touchStatus = TOUCH_STATUS_MOVING_WORLD;
-				// Log.d("TouchController", "Translating camera (dx,dy) '" + dx1 + "','" + dy1 + "'...");
+				 Log.d("TouchController", "Translating camera (dx,dy) '" + dx1 + "','" + dy1 + "'...");
 				dx1 = (float)(dx1 / max * Math.PI * 2);
 				dy1 = (float)(dy1 / max * Math.PI * 2);
 				mRenderer.getCamera().translateCamera(dx1,dy1);
+//				if(view.getModelActivity().getScene().getSelectedObject()!=null){
+//					view.getModelActivity().getScene().getSelectedObject().setPosition(new float[]{dx1/100,dy1/100,0});
+//				}
 			} else if (pointerCount == 2) {
 				if (fingersAreClosing) {
 					touchStatus = TOUCH_STATUS_ZOOMING_CAMERA;
@@ -323,6 +325,7 @@ public class TouchController {
 				if (distance < objectToSelectDistance) {
 					objectToSelectDistance = distance;
 					objectToSelect = obj;
+					break;
 				}
 			}
 		}

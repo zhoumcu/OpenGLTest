@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.5\2852e6e05fbb95076fc091f6d1780f1f8fe35e0f\commons-io-2.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2852e6e05fbb95076fc091f6d1780f1f8fe35e0f">
+        <dex dex="E:\2017\android-3D-model-viewer\app\build\intermediates\pre-dexed\debug\commons-io-2.5_1b499e97ad64f63b4dd34c8541e6363def82c430.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="E:\2017\android-3D-model-viewer\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0_0f8f37a9cd9d8debc711564da32f40ba380a6837.jar" />
+    </item>
+
+</items>

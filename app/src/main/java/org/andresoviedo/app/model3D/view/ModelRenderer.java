@@ -1,7 +1,22 @@
 package org.andresoviedo.app.model3D.view;
 
+import android.opengl.GLES20;
+import android.opengl.GLSurfaceView;
+import android.opengl.Matrix;
+import android.util.Log;
+import android.widget.Toast;
+
+import org.andresoviedo.app.model3D.entities.Camera;
+import org.andresoviedo.app.model3D.model.Object3D;
+import org.andresoviedo.app.model3D.model.Object3DBuilder;
+import org.andresoviedo.app.model3D.model.Object3DData;
+import org.andresoviedo.app.model3D.services.SceneLoader;
+import org.andresoviedo.app.model3D.services.WavefrontLoader;
+import org.andresoviedo.app.model3D.util.GLUtil;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,23 +24,11 @@ import java.util.Map;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import org.andresoviedo.app.model3D.entities.Camera;
-import org.andresoviedo.app.model3D.model.Object3D;
-import org.andresoviedo.app.model3D.model.Object3DBuilder;
-import org.andresoviedo.app.model3D.model.Object3DData;
-import org.andresoviedo.app.model3D.model.Object3DImpl;
-import org.andresoviedo.app.model3D.services.SceneLoader;
-import org.andresoviedo.app.model3D.util.GLUtil;
-
-import android.opengl.GLES20;
-import android.opengl.GLSurfaceView;
-import android.opengl.Matrix;
-import android.util.Log;
-import android.widget.Toast;
-
 public class ModelRenderer implements GLSurfaceView.Renderer {
 
 	private final static String TAG = ModelRenderer.class.getName();
+
+	public static float bb = 0.6f,br = 0.6f,bg = 0.3f;
 
 	// 3D window (parent component)
 	private ModelSurfaceView main;
@@ -38,7 +41,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 	// frustrum - nearest pixel
 	private float near = 1f;
 	// frustrum - fartest pixel
-	private float far = 10f;
+	private float far = 100f;
 
 	private Object3DBuilder drawer;
 	// The wireframe associated shape (it should be made of lines only)
@@ -58,8 +61,9 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 	// light position required to render with lighting
 	private final float[] lightPosInEyeSpace = new float[4];
+	private boolean isFisrt;
 
-	/**
+    /**
 	 * Construct a new renderer for the specified surface view
 	 *
 	 * @param modelSurfaceView
@@ -78,11 +82,11 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 	}
 
 	@Override
-	public void onSurfaceCreated(GL10 unused, EGLConfig config) {
+	public void onSurfaceCreated(GL10 gl10, EGLConfig config) {
 		// Set the background frame color
 		float[] backgroundColor = main.getModelActivity().getBackgroundColor();
-		GLES20.glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], backgroundColor[3]);
-
+//		GLES20.glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], backgroundColor[3]);
+		GLES20.glClearColor(br, bg, bb, 1.0f);
 		// Use culling to remove back faces.
 		// Don't remove back faces so we can see them
 		// GLES20.glEnable(GLES20.GL_CULL_FACE);
@@ -92,6 +96,12 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 		// Enable blending for combining colors when there is transparency
 		GLES20.glEnable(GLES20.GL_BLEND);
+		GLES20.glEnable(GLES20.GL_LEQUAL);
+		GLES20.glHint(3152, 4354);
+
+		gl10.glEnable(GL10.GL_LIGHTING);
+		gl10.glEnable(GL10.GL_LIGHT0);
+
 		GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
 
 		// Lets create our 3D world components
@@ -99,6 +109,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 		// This component will draw the actual models using OpenGL
 		drawer = new Object3DBuilder();
+
 	}
 
 	@Override
@@ -108,6 +119,9 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 		// Adjust the viewport based on geometry changes, such as screen rotation
 		GLES20.glViewport(0, 0, width, height);
+
+		// 设置屏幕背景色RGBA
+//		GLES20.glClearColor(br, bg, bb, 1.0f);
 
 		// INFO: Set the camera position (View matrix)
 		// The camera has 3 vectors (the position, the vector where we are looking at, and the up position (sky)
@@ -121,11 +135,12 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 		// Calculate the projection and view transformation
 		Matrix.multiplyMM(mvpMatrix, 0, modelProjectionMatrix, 0, modelViewMatrix, 0);
+
 	}
 
 	@Override
 	public void onDrawFrame(GL10 unused) {
-
+		GLES20.glClearColor(br, bg, bb, 1.0f);
 		// Draw background color
 		GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
@@ -152,27 +167,27 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 		scene.onDrawFrame();
 
 		// draw light
-		if (scene.isDrawLighting()) {
-
-			Object3DImpl lightBulbDrawer = (Object3DImpl) drawer.getPointDrawer();
-
-			float[] lightModelViewMatrix = lightBulbDrawer.getMvMatrix(lightBulbDrawer.getMMatrix(scene.getLightBulb()),modelViewMatrix);
-
-			// Calculate position of the light in eye space to support lighting
-			Matrix.multiplyMV(lightPosInEyeSpace, 0, lightModelViewMatrix, 0, scene.getLightBulb().getPosition(), 0);
-
-			// Draw a point that represents the light bulb
-			lightBulbDrawer.draw(scene.getLightBulb(), modelProjectionMatrix, modelViewMatrix, -1, lightPosInEyeSpace);
-		}
+//		if (scene.isDrawLighting()) {
+//
+//			Object3DImpl lightBulbDrawer = (Object3DImpl) drawer.getPointDrawer();
+//
+//			float[] lightModelViewMatrix = lightBulbDrawer.getMvMatrix(lightBulbDrawer.getMMatrix(scene.getLightBulb()),modelViewMatrix);
+//
+//			// Calculate position of the light in eye space to support lighting
+//			Matrix.multiplyMV(lightPosInEyeSpace, 0, lightModelViewMatrix, 0, scene.getLightBulb().getPosition(), 0);
+//
+//			// Draw a point that represents the light bulb
+//			lightBulbDrawer.draw(scene.getLightBulb(), modelProjectionMatrix, modelViewMatrix, -1, lightPosInEyeSpace);
+//		}
 
 		List<Object3DData> objects = scene.getObjects();
 		for (int i=0; i<objects.size(); i++) {
 			try {
 				Object3DData objData = objects.get(i);
 				boolean changed = objData.isChanged();
-
+				Log.e("test","X:"+objData.getPositionX()+"Y:"+objData.getPositionY()+"Z:"+objData.getPositionZ());
 				Object3D drawerObject = drawer.getDrawer(objData, scene.isDrawTextures(), scene.isDrawLighting());
-				// Log.d("ModelRenderer","Drawing object using '"+drawerObject.getClass()+"'");
+				 Log.d("ModelRenderer","Drawing object using '"+drawerObject.getClass()+"'");
 
 				Integer textureId = textures.get(objData.getTextureData());
 				if (textureId == null && objData.getTextureData() != null) {
@@ -236,6 +251,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 						normalsDrawer.draw(normalData, modelProjectionMatrix, modelViewMatrix, -1, null);
 					}
 				}
+
 				// TODO: enable this only when user wants it
 				// obj3D.drawVectorNormals(result, modelViewMatrix);
 			} catch (IOException ex) {
@@ -243,6 +259,64 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 						"There was a problem creating 3D object", Toast.LENGTH_LONG).show();
 			}
 		}
+		if(!isFisrt&&objects.size()==main.getModelActivity().models.length){
+			centerToAll(objects);
+		}
+	}
+
+	public void centerToAll(List<Object3DData> o3DList) {
+		float def = 0;
+		// calculate a scale factor
+		float scaleFactor = 0.003f;
+		Object3DData base = null;
+		float x0, y0, z0;
+		float x = 0, y= 0, z= 0;
+
+		for (Object3DData object3DData : o3DList) {
+			if (!object3DData.isLoadSucess()){
+				return;
+			}
+//			if (!object3DData.getId().equals("aix")){
+				if (object3DData.getDistances()>def){
+					def = object3DData.getDistances();
+					base = object3DData;
+				}
+//			}
+		}
+		isFisrt = true;
+		if (base==null) return;
+		float largest = base.getDimensions().getLargest();
+		System.out.println("Largest dimension: " + largest);
+		if (largest != 0.0f)
+			scaleFactor = (1.0f / largest);
+		WavefrontLoader.Tuple3 center =base.getDimensions().getCenter();
+		for (Object3DData object3DData : o3DList) {
+            boolean isFisrtUpdate = false;
+//			if (!object3DData.getId().equals("aix")){
+				FloatBuffer vertexBuffer = object3DData.getVertexBuffer() != null ? object3DData.getVertexBuffer() : object3DData.getVertexArrayBuffer();
+				for (int i = 0; i < vertexBuffer.capacity() / 3; i++) {
+					x0 = vertexBuffer.get(i * 3);
+					y0 = vertexBuffer.get(i * 3 + 1);
+					z0 = vertexBuffer.get(i * 3 + 2);
+					x = (x0 - object3DData.getDimensions().getCenter().getX()) * scaleFactor;
+					vertexBuffer.put(i * 3, x);
+					y = (y0 - object3DData.getDimensions().getCenter().getY()) * scaleFactor;
+					vertexBuffer.put(i * 3 + 1, y);
+					z = (z0 - object3DData.getDimensions().getCenter().getZ()) * scaleFactor;
+					vertexBuffer.put(i * 3 + 2, z);
+//                    if(!isFisrtUpdate){
+//                        isFisrtUpdate = true;
+//                        object3DData.getDimensions().set(x,y,z);
+//                    }else
+//                    object3DData.getDimensions().update(x,y,z);
+				}
+				if(object3DData != base)
+					object3DData.setPosition(new float[]{(object3DData.getDimensions().getCenter().getX()-center.getX())* scaleFactor
+							,(object3DData.getDimensions().getCenter().getY()-center.getY())* scaleFactor
+							,(object3DData.getDimensions().getCenter().getZ()-center.getZ())* scaleFactor});
+				Log.e("","test");
+			}
+//		}
 	}
 
 	public int getWidth() {
@@ -263,5 +337,12 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 	public Camera getCamera() {
 		return camera;
+	}
+
+	public void setBgColor(float r, float g, float b) {
+		br = r;
+		bg = g;
+		bb = b;
+		main.requestRender();
 	}
 }

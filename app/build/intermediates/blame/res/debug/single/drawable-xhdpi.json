@@ -1,0 +1,390 @@
+[
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_view.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_view.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_singlescale.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_singlescale.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_bottom.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_bottom.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\transport.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\transport.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_ani.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_ani.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_play.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_play.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_zxsection.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_zxsection.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_exactselect.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_exactselect.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_section.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_section.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_bg.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_bg.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_select_reset.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_select_reset.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera1.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\camera1.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_share.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_share.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_gesturenote.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_gesturenote.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_solid.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_solid.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_showall.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_showall.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_home.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_home.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_change_transparent.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_change_transparent.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\camera0.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\camera0.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_voicenote.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_voicenote.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_file.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_file.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_rename.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_rename.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_browers.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_browers.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_perspective.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_perspective.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_pointer.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_pointer.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_stop.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_stop.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_nofull1.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_nofull1.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_folder.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_folder.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_right.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_right.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_behind.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_behind.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_showcutplane.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_showcutplane.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_wire1.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_wire1.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_note.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_note.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_axis.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_axis.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_yzsection.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_yzsection.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_deletenote.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_deletenote.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_bg1.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_bg1.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_pointrotate.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_pointrotate.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_snapshot.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_snapshot.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_record.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_record.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_measerradius.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_measerradius.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_logout.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_logout.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_sectionreversal.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_sectionreversal.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\background.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\geren.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\geren.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_remove.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_remove.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_undo.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_undo.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_3dnote.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_3dnote.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_hand.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_hand.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\buttonpress.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\buttonpress.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_anireset.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_anireset.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_measurediameter.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_measurediameter.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_search.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_search.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_top.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_top.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_filter.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_filter.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_measurepntpntlength.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_measurepntpntlength.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_explosive.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_explosive.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_displaycontrol.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_displaycontrol.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_triangle.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_triangle.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_select_and_move.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_select_and_move.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_aniloop.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_aniloop.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_about.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_about.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_pmi.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_pmi.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_showself.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_showself.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_assembly.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_assembly.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_measure.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_measure.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_measurelength.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_measurelength.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_savepre.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_savepre.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_set.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_set.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_left.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_left.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_bg2.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_bg2.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_select.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_select.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_savepic.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_savepic.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_transparentexchange.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_transparentexchange.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\frontcolor.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\frontcolor.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\backcolor.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\backcolor.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_solid_wire.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_solid_wire.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_aniplay.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_aniplay.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_singlemove.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_singlemove.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_bg3.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_bg3.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_onlytri.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_onlytri.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_quit.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_quit.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_wire.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_wire.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_showsectionplane.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_showsectionplane.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_box.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_box.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_add.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_add.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_xysection.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_xysection.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_anipause.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_anipause.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_showexchange.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_showexchange.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_transparent.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_transparent.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_select_center.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_select_center.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\toolbar_black_bg.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\toolbar_black_bg.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_front.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_front.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_nofull.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_nofull.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher2.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher2.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_cloud.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_cloud.png"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\button_reset.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_reset.png"
+    }
+]

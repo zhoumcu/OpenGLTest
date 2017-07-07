@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/ui_toolbar_width"
+    android:layout_height="wrap_content"
+    android:baselineAligned="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/sview_titlebar_file"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:layout_marginRight="0.0dip"
+        android:background="@drawable/toolbar_button_style"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:contentDescription="打开文件"
+            android:focusable="false"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_folder" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#ffffffff" />
+    <LinearLayout
+        android:id="@+id/frontcolor_set"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_transtyle"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="2.0dip"
+            android:contentDescription="@string/transparent"
+            android:src="@drawable/frontcolor" />
+        <!--
+        <TextView android:id="@+id/camer_txt" android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视角" />
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sview_displaydialog_whichcamera"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_transtyle"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/camer"
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="2.0dip"
+            android:contentDescription="@string/transparent"
+            android:src="@drawable/camera1" />
+        <!--
+        <TextView android:id="@+id/camer_txt" android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视角" />
+        -->
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#ffffffff" />
+    <!--
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/sview_modelbar_measure" android:background="@drawable/toolbar_button_style" android:layout_width="wrap_content" android:layout_height="@dimen/ui_toolbar_height">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/ui_button_image_width" android:layout_height="@dimen/ui_button_image_height" android:src="@drawable/button_assembly" android:contentDescription="测量" />
+	    <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="文件" />
+    </LinearLayout>
+    -->
+    <LinearLayout
+        android:id="@+id/sview_modelbar_perspective"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_style"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:contentDescription="透视"
+            android:src="@drawable/button_wire1" />
+        <!--
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="视图" />
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/transport"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_transtyle"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="2.0dip"
+            android:contentDescription="@string/panmode"
+            android:src="@drawable/transport" />
+        <!--
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="透明" />
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sview_displaydialog_selrotate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_transtyle"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="2.0dip"
+            android:contentDescription="@string/spincenter"
+            android:src="@drawable/button_pointrotate" />
+        <!--
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="旋转" />
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sview_displaydialog_onepointermove"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_transtyle"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="2.0dip"
+            android:contentDescription="@string/panmode"
+            android:src="@drawable/button_singlemove" />
+        <!--
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="平移" />
+        -->
+    </LinearLayout>
+    <!--
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/sview_modelbar_display" android:background="@drawable/toolbar_button_style" android:layout_width="wrap_content" android:layout_height="@dimen/ui_toolbar_height">
+        <ImageView android:layout_gravity="center" android:layout_width="@dimen/ui_button_image_width" android:layout_height="@dimen/ui_button_image_height" android:src="@drawable/button_hand" />
+    </LinearLayout>
+    -->
+    <LinearLayout
+        android:id="@+id/sview_displaydialog_home"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_transtyle"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="2.0dip"
+            android:src="@drawable/button_reset" />
+        <!--
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="复位" />
+        -->
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#ffffffff" />
+
+    <LinearLayout
+        android:id="@+id/sview_modelbar_note"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_style"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:contentDescription="批注"
+            android:src="@drawable/button_snapshot" />
+        <!--
+        <TextView android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="涂鸦" />
+        -->
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#ffffffff" />
+
+    <LinearLayout
+        android:id="@+id/sview_titlebar_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:background="@drawable/toolbar_button_style"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:contentDescription="批注"
+            android:src="@drawable/backcolor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/geren"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_toolbar_height"
+        android:visibility="gone"
+        android:background="@drawable/toolbar_button_style"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/ui_button_image_width"
+            android:layout_height="@dimen/ui_button_image_height"
+            android:layout_gravity="center"
+            android:contentDescription="批注"
+            android:src="@drawable/geren" />
+    </LinearLayout>
+</LinearLayout>

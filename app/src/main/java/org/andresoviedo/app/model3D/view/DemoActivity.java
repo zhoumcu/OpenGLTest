@@ -1,11 +1,5 @@
 package org.andresoviedo.app.model3D.view;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.andresoviedo.dddmodel2.R;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ListActivity;
@@ -27,6 +21,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.andresoviedo.dddmodel2.R;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DemoActivity extends ListActivity {
 
@@ -70,9 +70,10 @@ public class DemoActivity extends ListActivity {
 	private void loadDemo(final String selectedItem) {
 		Intent intent = new Intent(DemoActivity.this.getApplicationContext(), ModelActivity.class);
 		Bundle b = new Bundle();
-		b.putString("assetDir", "models");
-		b.putString("assetFilename", selectedItem);
-		b.putString("immersiveMode", "true");
+//		b.putString("assetDir", "models");
+//		b.putString("assetFilename", selectedItem);
+//		b.putString("immersiveMode", "true");
+		b.putString("assetFilename", "");
 		intent.putExtras(b);
 		DemoActivity.this.startActivity(intent);
 	}

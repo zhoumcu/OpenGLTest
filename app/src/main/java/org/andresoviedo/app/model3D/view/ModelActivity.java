@@ -1,22 +1,34 @@
 package org.andresoviedo.app.model3D.view;
 
-import java.io.File;
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.opengl.GLSurfaceView;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.andresoviedo.app.model3D.services.ExampleSceneLoader;
 import org.andresoviedo.app.model3D.services.SceneLoader;
 import org.andresoviedo.app.util.Utils;
 import org.andresoviedo.dddmodel2.R;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.opengl.GLSurfaceView;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import java.io.File;
+import java.util.ArrayList;
 
 /**
  * This activity represents the container for our 3D viewer.
@@ -40,11 +52,13 @@ public class ModelActivity extends Activity {
 	 */
 	private float[] backgroundColor = new float[]{0.2f, 0.2f, 0.2f, 1.0f};
 
-	private GLSurfaceView gLView;
+	private ModelSurfaceView gLView;
 
 	private SceneLoader scene;
 
 	private Handler handler;
+
+	public String[] models = new String[]{"bei","bukuai1","bukuai2","gupen","gupennew"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,10 +86,22 @@ public class ModelActivity extends Activity {
 
 		handler = new Handler(getMainLooper());
 
+		setContentView(R.layout.activity_test);
 		// Create a GLSurfaceView instance and set it
 		// as the ContentView for this Activity.
 		gLView = new ModelSurfaceView(this);
-		setContentView(gLView);
+		((RelativeLayout) this.findViewById(R.id.main_view_content))
+				.addView(gLView);
+//		setContentView(gLView);
+		((RelativeLayout) this.findViewById(R.id.main_view_content)).setOnTouchListener(new View.OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				Toast.makeText(ModelActivity.this,"ssss",Toast.LENGTH_SHORT).show();
+				return true;
+			}
+		});
+
+		initList();
 
 		// Create our 3D sceneario
 		if (paramFilename == null && paramAssetFilename == null) {
@@ -83,8 +109,12 @@ public class ModelActivity extends Activity {
 		} else {
 			scene = new SceneLoader(this);
 		}
-		scene.init();
-
+//		scene.init();
+//		loadDemo("bei.stl");
+//		loadDemo("bukuai1.stl");
+//		loadDemo("bukuai2.stl");
+//		loadDemo("gupen.stl");
+//		loadDemo("gupennew.stl");
 		// Show the Up button in the action bar.
 		setupActionBar();
 
@@ -93,8 +123,86 @@ public class ModelActivity extends Activity {
 		Utils.printTouchCapabilities(getPackageManager());
 
 		setupOnSystemVisibilityChangeListener();
-	}
 
+		this.findViewById(R.id.sview_titlebar_setting).setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+//				toolPressed(v);
+				LinearLayout layout = new LinearLayout(ModelActivity.this);
+				layout.setOrientation(LinearLayout.VERTICAL);
+
+				final TextView colorText = new TextView(ModelActivity.this);
+				ColorPickerView colorPick = new ColorPickerView(ModelActivity.this, Color.parseColor("#FFFFFF"), 0.8,colorText);
+
+				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT);
+				lp.gravity = Gravity.CENTER_HORIZONTAL;
+				layout.addView(colorPick, lp);
+				layout.addView(colorText,lp);
+
+				AlertDialog mAlertDialog = new AlertDialog.Builder(ModelActivity.this)
+						.setTitle("选择背景颜色")
+						.setView(layout)
+						.setPositiveButton(getString(R.string.dialog_color_OK), new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								String c = colorText.getText().toString().substring(1);
+								float r = Integer.parseInt(c.substring(0,2),16)/255.0f;
+								float g = Integer.parseInt(c.substring(2,4),16)/255.0f;
+								float b = Integer.parseInt(c.substring(4, 6),16)/255.0f;
+								ModelRenderer.br = r;
+								ModelRenderer.bg  = g;
+								ModelRenderer.bb  = b;
+								gLView.requestRender();
+							}
+						})
+						.setNegativeButton(getString(R.string.dialog_color_cancle), new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						}).show();
+			}});
+
+		for (String model : models){
+			loadDemo(model);
+		}
+	}
+	private void initList(){
+//		AssetManager assets = getApplicationContext().getAssets();
+
+//		try {
+//			models = assets.list("models");
+//		} catch (IOException ex) {
+//			Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+//			return;
+//		}
+
+		// add 1 entry per model found
+		final ArrayList<RowItem> rowItems = new ArrayList<RowItem>();
+		for (String model : models) {
+//			if (model.toLowerCase().endsWith(".obj") || model.toLowerCase().endsWith(".stl")) {
+				RowItem item = new RowItem("models/" + model, model, "models/" + model + ".jpg");
+				rowItems.add(item);
+//			}
+		}
+		ListView listView = (ListView) findViewById(R.id.listview);
+
+		StringAdapter adapter = new StringAdapter(this,rowItems);
+
+		listView.setAdapter(adapter);
+
+		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				final RowItem selectedItem = (RowItem) rowItems.get(position);
+				scene.setSelectedObjectByID(selectedItem.path);
+			}
+		});
+	}
+	private void loadDemo(final String selectedItem) {
+		this.paramAssetDir = "models";
+		this.paramAssetFilename = selectedItem+".stl";
+		this.immersiveMode = true;
+		scene.init();
+	}
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
 	 */

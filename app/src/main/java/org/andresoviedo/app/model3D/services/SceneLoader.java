@@ -1,10 +1,8 @@
 package org.andresoviedo.app.model3D.services;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+import android.os.SystemClock;
+import android.util.Log;
+import android.widget.Toast;
 
 import org.andresoviedo.app.model3D.model.Object3DBuilder;
 import org.andresoviedo.app.model3D.model.Object3DBuilder.Callback;
@@ -12,9 +10,11 @@ import org.andresoviedo.app.model3D.model.Object3DData;
 import org.andresoviedo.app.model3D.view.ModelActivity;
 import org.andresoviedo.app.util.url.android.Handler;
 
-import android.os.SystemClock;
-import android.util.Log;
-import android.widget.Toast;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This class loads a 3D scena as an example of what can be done with the app
@@ -71,12 +71,13 @@ public class SceneLoader {
 	/**
 	 * Initial light position
 	 */
-	private float[] lightPosition = new float[]{0, 0, 3, 1};
+	private float[] lightPosition = new float[]{0, 0, 1.0f, 1};
 
 	/**
 	 * Light bulb 3d data
 	 */
 	private final Object3DData lightPoint = Object3DBuilder.buildPoint(new float[4]).setId("light").setPosition(lightPosition);
+	private boolean isFirst = true;
 
 	public SceneLoader(ModelActivity main) {
 		this.parent = main;
@@ -105,7 +106,12 @@ public class SceneLoader {
 				Log.e("SceneLoader", e.getMessage(), e);
 				throw new RuntimeException(e);
 			}
-
+//			if(isFirst){
+//				isFirst = false;
+//				Object3DData object3DData = Object3DBuilder.buildAxis().setId("aix").setColor(new float[] { 1.0f, 1.0f, 0, 1.0f });
+//				object3DData.setLoadSucess(true);
+//				addObject(object3DData);
+//			}
 			Object3DBuilder.loadV6AsyncParallel(parent, url, parent.getParamFile(), parent.getParamAssetDir(),
 					parent.getParamAssetFilename(), new Callback() {
 
@@ -120,7 +126,6 @@ public class SceneLoader {
 						@Override
 						public void onLoadComplete(Object3DData data) {
 							data.setColor(DEFAULT_COLOR);
-							data.setScale(new float[]{5f, 5f, 5f});
 							addObject(data);
 						}
 
@@ -249,8 +254,26 @@ public class SceneLoader {
 		return selectedObject;
 	}
 
+	public void setSelectedObjectByID(String selectedObjectId) {
+		for (Object3DData object3DData : objects){
+			Log.e("Object3DData","选中："+selectedObjectId+"实际："+object3DData.getId());
+			if (object3DData.getId().contains(selectedObjectId)){
+				this.selectedObject = object3DData;
+				object3DData.setColor(new float[]{0.5f,0.3f,0.4f,0.3f});
+				requestRender();
+				break;
+			}
+		}
+	}
+
 	public void setSelectedObject(Object3DData selectedObject) {
 		this.selectedObject = selectedObject;
+		if(selectedObject!=null){
+			selectedObject.setColor(new float[]{0.5f,0.3f,0.4f,0.3f});
+//			selectedObject.setPosition(new float[]{0,0,0});
+//			selectedObject.setScale(new float[]{1.0f,1.0f,1.0f});
+			requestRender();
+		}
 	}
 
 }

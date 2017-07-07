@@ -1,14 +1,7 @@
 package org.andresoviedo.app.model3D.model;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
-import java.util.ArrayList;
-import java.util.List;
+import android.opengl.GLES20;
+import android.util.Log;
 
 import org.andresoviedo.app.model3D.entities.BoundingBox;
 import org.andresoviedo.app.model3D.services.WavefrontLoader;
@@ -18,8 +11,15 @@ import org.andresoviedo.app.model3D.services.WavefrontLoader.Materials;
 import org.andresoviedo.app.model3D.services.WavefrontLoader.Tuple3;
 import org.andresoviedo.app.util.math.Math3DUtils;
 
-import android.opengl.GLES20;
-import android.util.Log;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.InputStream;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This is the basic 3D data necessary to build the 3D object
@@ -89,6 +89,8 @@ public class Object3DData {
 	// Async Loader
 	private WavefrontLoader.ModelDimensions modelDimensions;
 	private WavefrontLoader loader;
+	private float distances;
+	private boolean loadSucess;
 
 	public Object3DData(FloatBuffer vertexArrayBuffer) {
 		this.vertexArrayBuffer = vertexArrayBuffer;
@@ -672,36 +674,52 @@ public class Object3DData {
 	/*
 	 * Position the model so it's center is at the origin, and scale it so its longest dimension is no bigger than
 	 * maxSize.
-	 */
-	{
+	 */ {
 		// calculate a scale factor
-		float scaleFactor = 1.0f;
+		float scaleFactor = 0.01f;
 		float largest = modelDimensions.getLargest();
-		// System.out.println("Largest dimension: " + largest);
-		if (largest != 0.0f)
-			scaleFactor = (1.0f / largest);
-		Log.i("Object3DData","Scaling model with factor: " + scaleFactor+". Largest: "+largest);
+		System.out.println("Largest dimension: " + largest);
+//		if (largest != 0.0f)
+//			scaleFactor = (1.0f / largest);
+		Log.i("Object3DData", "Scaling model with factor: " + scaleFactor + ". Largest: " + largest);
 
 		// get the model's center point
 		Tuple3 center = modelDimensions.getCenter();
-		Log.i("Object3DData","Objects actual position: " + center.toString());
-
+		Log.i("Object3DData", "Objects actual position: " + center.toString());
+		float zL = (float) (Math.sqrt(center.getX() * center.getX() + center.getY() * center.getY() + center.getZ() * center.getZ()));
 		// modify the model's vertices
-		float x0, y0, z0;
-		float x, y, z;
-		FloatBuffer vertexBuffer = getVertexBuffer() != null? getVertexBuffer() : getVertexArrayBuffer();
-		for (int i = 0; i < vertexBuffer.capacity()/3; i++) {
-			x0 = vertexBuffer.get(i*3);
-			y0 = vertexBuffer.get(i*3+1);
-			z0 = vertexBuffer.get(i*3+2);
-			x = (x0 - center.getX()) * scaleFactor;
-			vertexBuffer.put(i*3,x);
-			y = (y0 - center.getY()) * scaleFactor;
-			vertexBuffer.put(i*3+1,y);
-			z = (z0 - center.getZ()) * scaleFactor;
-			vertexBuffer.put(i*3+2,z);
-		}
+//		float x0, y0, z0;
+//		float x, y, z;
+//		FloatBuffer vertexBuffer = getVertexBuffer() != null ? getVertexBuffer() : getVertexArrayBuffer();
+//		Log.i("Object3DData", "Objects vertexBuffer capacity: " + vertexBuffer.capacity() + "中心离原点距离：" + zL);
+//		for (int i = 0; i < vertexBuffer.capacity() / 3; i++) {
+//			x0 = vertexBuffer.get(i * 3);
+//			y0 = vertexBuffer.get(i * 3 + 1);
+//			z0 = vertexBuffer.get(i * 3 + 2);
+//			x = (x0 - center.getX()) * scaleFactor;
+//			vertexBuffer.put(i * 3, x);
+//			y = (y0 - center.getY()) * scaleFactor;
+//			vertexBuffer.put(i * 3 + 1, y);
+//			z = (z0 - center.getZ()) * scaleFactor;
+//			vertexBuffer.put(i * 3 + 2, z);
+//		}
+		this.setDistances(zL);
+		this.setLoadSucess(true);
 	} // end of centerScale()
 
+	public void setDistances(float distances) {
+		this.distances = distances;
+	}
 
+	public float getDistances() {
+		return distances;
+	}
+
+	public void setLoadSucess(boolean loadSucess) {
+		this.loadSucess = loadSucess;
+	}
+
+	public boolean isLoadSucess() {
+		return loadSucess;
+	}
 }

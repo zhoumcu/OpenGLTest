@@ -454,9 +454,9 @@ public class WavefrontLoader {
 
 	public static class ModelDimensions {
 		// edge coordinates
-		private float leftPt, rightPt; // on x-axis
-		private float topPt, bottomPt; // on y-axis
-		private float farPt, nearPt; // on z-axis
+		public float leftPt, rightPt; // on x-axis
+		public float topPt, bottomPt; // on y-axis
+		public float farPt, nearPt; // on z-axis
 
 		// for reporting
 		private DecimalFormat df = new DecimalFormat("0.##"); // 2 dp
@@ -530,9 +530,15 @@ public class WavefrontLoader {
 		} // end of getLargest()
 
 		public Tuple3 getCenter() {
-			float xc = (rightPt + leftPt) / 2.0f;
-			float yc = (topPt + bottomPt) / 2.0f;
-			float zc = (nearPt + farPt) / 2.0f;
+			float xc = leftPt+(rightPt - leftPt) / 2.0f;
+			float yc = bottomPt+(topPt - bottomPt) / 2.0f ;
+			float zc = nearPt+(farPt - nearPt) / 2.0f;
+//            float xc = rightPt;
+//            float yc = topPt ;
+//            float zc = nearPt ;
+//			float xc = (rightPt + leftPt) / 2.0f;
+//			float yc = (topPt + bottomPt) / 2.0f ;
+//			float zc = (nearPt + farPt) / 2.0f;
 			return new Tuple3(xc, yc, zc);
 		} // end of getCenter()
 

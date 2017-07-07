@@ -3,15 +3,11 @@ package org.andresoviedo.app.model3D.controller;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.andresoviedo.app.model3D.model.Object3DBuilder;
 import org.andresoviedo.app.model3D.model.Object3DData;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 
 /**
@@ -88,6 +84,7 @@ public abstract class LoaderTask extends AsyncTask<Void, Integer, Object3DData> 
 	protected Object3DData doInBackground(Void... params) {
 		try {
 			Object3DData data = build();
+			data.setId(url.getPath());
 			callback.onLoadComplete(data);
 			build(data);
 			return  data;
