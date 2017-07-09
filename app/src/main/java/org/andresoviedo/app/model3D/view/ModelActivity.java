@@ -13,15 +13,14 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import org.andresoviedo.app.model3D.model.Object3DData;
 import org.andresoviedo.app.model3D.services.ExampleSceneLoader;
 import org.andresoviedo.app.model3D.services.SceneLoader;
 import org.andresoviedo.app.util.Utils;
@@ -59,6 +58,7 @@ public class ModelActivity extends Activity {
 	private Handler handler;
 
 	public String[] models = new String[]{"bei","bukuai1","bukuai2","gupen","gupennew"};
+	private Object3DData selectedObject;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -93,13 +93,6 @@ public class ModelActivity extends Activity {
 		((RelativeLayout) this.findViewById(R.id.main_view_content))
 				.addView(gLView);
 //		setContentView(gLView);
-		((RelativeLayout) this.findViewById(R.id.main_view_content)).setOnTouchListener(new View.OnTouchListener() {
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				Toast.makeText(ModelActivity.this,"ssss",Toast.LENGTH_SHORT).show();
-				return true;
-			}
-		});
 
 		initList();
 
@@ -160,7 +153,18 @@ public class ModelActivity extends Activity {
 							}
 						}).show();
 			}});
-
+		findViewById(R.id.hide_choose).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				gLView.getRenderer().hideChooseObject(selectedObject);
+			}
+		});
+		findViewById(R.id.transparent_choose).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				gLView.getRenderer().transparentChooseObject(selectedObject);
+			}
+		});
 		for (String model : models){
 			loadDemo(model);
 		}
@@ -193,7 +197,8 @@ public class ModelActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				final RowItem selectedItem = (RowItem) rowItems.get(position);
-				scene.setSelectedObjectByID(selectedItem.path);
+				selectedObject = scene.setSelectedObjectByID(selectedItem.path);
+				findViewById(R.id.main_bottom_toolbar).setVisibility(View.VISIBLE);
 			}
 		});
 	}

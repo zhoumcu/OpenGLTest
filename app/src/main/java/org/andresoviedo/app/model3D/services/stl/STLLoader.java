@@ -83,7 +83,8 @@ public final class STLLoader {
 				int totalFaces = stlFileReader.getNumOfFacets()[0];
 				boolean first = true;
 				while (stlFileReader.getNextFacet(normal, vertices) && counter < totalFaces) {
-					Log.d("STLLoader", "Loading facet " + counter++ + "");
+//					Log.d("STLLoader", "Loading facet " + counter++ + "");
+					counter++;
 					normalsBuffer.put(normalCounter++,(float) normal[0]);
 					normalsBuffer.put(normalCounter++,(float) normal[1]);
 					normalsBuffer.put(normalCounter++,(float) normal[2]);

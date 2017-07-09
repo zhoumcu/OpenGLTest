@@ -1,14 +1,14 @@
 [
     {
-        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\model.xml",
-        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\menu\\model.xml"
+        "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\model.xml",
+        "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\menu\\model.xml"
     },
     {
-        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
-        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\menu\\menu.xml"
+        "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\menu\\menu.xml"
     }
 ]
