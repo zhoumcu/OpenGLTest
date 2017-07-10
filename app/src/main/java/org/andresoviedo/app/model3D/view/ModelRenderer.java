@@ -298,6 +298,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 		WavefrontLoader.Tuple3 center =base.getDimensions().getCenter();
 		for (Object3DData object3DData : o3DList) {
             boolean isFisrtUpdate = false;
+			WavefrontLoader.ModelDimensions dimensions =object3DData.getDimensions();
 //			if (!object3DData.getId().equals("aix")){
 				FloatBuffer vertexBuffer = object3DData.getVertexBuffer() != null ? object3DData.getVertexBuffer() : object3DData.getVertexArrayBuffer();
 				for (int i = 0; i < vertexBuffer.capacity() / 3; i++) {
@@ -313,13 +314,14 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 //                    if(!isFisrtUpdate){
 //                        isFisrtUpdate = true;
 //                        object3DData.getDimensions().set(x,y,z);
-//                    }else
-//                    object3DData.getDimensions().update(x,y,z);
+//                    }else{
+//						object3DData.getDimensions().update(x,y,z);
+//					}
 				}
 				if(object3DData != base)
-					object3DData.setPosition(new float[]{(object3DData.getDimensions().getCenter().getX()-center.getX())* scaleFactor
-							,(object3DData.getDimensions().getCenter().getY()-center.getY())* scaleFactor
-							,(object3DData.getDimensions().getCenter().getZ()-center.getZ())* scaleFactor});
+					object3DData.setPosition(new float[]{(dimensions.getCenter().getX()-center.getX())* scaleFactor
+							,(dimensions.getCenter().getY()-center.getY())* scaleFactor
+							,(dimensions.getCenter().getZ()-center.getZ())* scaleFactor});
 				Log.e("","test");
 			}
 //		}
@@ -343,21 +345,5 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 	public Camera getCamera() {
 		return camera;
-	}
-
-	public void setBgColor(float r, float g, float b) {
-		br = r;
-		bg = g;
-		bb = b;
-		main.requestRender();
-	}
-
-	public void hideChooseObject(Object3DData objectName) {
-		objectName.setVisible(false);
-		main.requestRender();
-	}
-	public void transparentChooseObject(Object3DData objectName) {
-		objectName.setColor(new float[]{0.5f,0.3f,0.4f,0.1f});
-		main.requestRender();
 	}
 }

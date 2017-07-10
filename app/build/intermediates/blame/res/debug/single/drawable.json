@@ -1,5 +1,13 @@
 [
     {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher2.gif",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable\\ic_launcher2.gif"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\drawable\\ic_launcher.png"
     },

@@ -34,7 +34,7 @@ import java.util.ArrayList;
  * 
  * @author andresoviedo
  */
-public class ModelActivity extends Activity {
+public class ModelActivity extends Activity implements View.OnClickListener {
 
 	private String paramAssetDir;
 	private String paramAssetFilename;
@@ -57,8 +57,21 @@ public class ModelActivity extends Activity {
 
 	private Handler handler;
 
-	public String[] models = new String[]{"bei","bukuai1","bukuai2","gupen","gupennew"};
+	public String[] models = new String[]{"bei","bukuai1","bukuai2"/*,"gupen","gupennew"*/};
 	private Object3DData selectedObject;
+    private boolean isHideChoose ;
+    private boolean isTransparentChoose;
+    private boolean isTransparentOtherChoose;
+    private boolean isHideOhterChoose;
+	private TextView hideChoose;
+	private TextView transparentChoose;
+	private TextView hideOtherChoose;
+	private TextView transparentOtherChoose;
+	private TextView changeChooseColor;
+	private TextView undoChooseColor;
+	private LinearLayout point;
+	private LinearLayout line;
+	private LinearLayout face;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +108,7 @@ public class ModelActivity extends Activity {
 //		setContentView(gLView);
 
 		initList();
-
+		initView();
 		// Create our 3D sceneario
 		if (paramFilename == null && paramAssetFilename == null) {
 			scene = new ExampleSceneLoader(this);
@@ -103,11 +116,6 @@ public class ModelActivity extends Activity {
 			scene = new SceneLoader(this);
 		}
 //		scene.init();
-//		loadDemo("bei.stl");
-//		loadDemo("bukuai1.stl");
-//		loadDemo("bukuai2.stl");
-//		loadDemo("gupen.stl");
-//		loadDemo("gupennew.stl");
 		// Show the Up button in the action bar.
 		setupActionBar();
 
@@ -153,22 +161,33 @@ public class ModelActivity extends Activity {
 							}
 						}).show();
 			}});
-		findViewById(R.id.hide_choose).setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				gLView.getRenderer().hideChooseObject(selectedObject);
-			}
-		});
-		findViewById(R.id.transparent_choose).setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				gLView.getRenderer().transparentChooseObject(selectedObject);
-			}
-		});
+
 		for (String model : models){
 			loadDemo(model);
 		}
 	}
+
+	private void initView() {
+		hideChoose = (TextView)findViewById(R.id.hide_choose);
+		transparentChoose = (TextView)findViewById(R.id.transparent_choose);
+		hideOtherChoose = (TextView)findViewById(R.id.hide_other);
+		transparentOtherChoose = (TextView)findViewById(R.id.transparent_other);
+		changeChooseColor = (TextView)findViewById(R.id.change_choose_color);
+		undoChooseColor = (TextView)findViewById(R.id.undo_choose_color);
+		point = (LinearLayout)findViewById(R.id.sview_displaydialog_point);
+		line = (LinearLayout)findViewById(R.id.sview_displaydialog_line);
+		face = (LinearLayout)findViewById(R.id.sview_displaydialog_face);
+		hideChoose.setOnClickListener(this);
+		transparentChoose.setOnClickListener(this);
+		hideOtherChoose.setOnClickListener(this);
+		transparentOtherChoose.setOnClickListener(this);
+		changeChooseColor.setOnClickListener(this);
+		undoChooseColor.setOnClickListener(this);
+		point.setOnClickListener(this);
+		line.setOnClickListener(this);
+		face.setOnClickListener(this);
+	}
+
 	private void initList(){
 //		AssetManager assets = getApplicationContext().getAssets();
 
@@ -366,4 +385,102 @@ public class ModelActivity extends Activity {
 		return gLView;
 	}
 
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()){
+			case R.id.hide_choose:
+				isHideChoose = !isHideChoose;
+				if(isHideChoose){
+					scene.hideChooseObject(selectedObject);
+					transparentChoose.setEnabled(false);
+					hideChoose.setSelected(true);
+                    hideChoose.setText("显示所选");
+				}else {
+					scene.noHideChooseObject(selectedObject);
+					transparentChoose.setEnabled(true);
+					hideChoose.setSelected(false);
+                    hideChoose.setText("隐藏所选");
+				}
+				break;
+			case R.id.transparent_choose:
+				isTransparentChoose = !isTransparentChoose;
+				if(isTransparentChoose){
+                    transparentChoose.setText("恢复所选");
+                    transparentChoose.setSelected(true);
+					scene.transparentChooseObject(selectedObject);
+				}else {
+                    transparentChoose.setText("透明所选");
+                    transparentChoose.setSelected(false);
+					scene.noTransparentChooseObject(selectedObject,SceneLoader.DEFAULT_COLOR);
+				}
+				break;
+			case R.id.hide_other:
+				isHideOhterChoose = !isHideOhterChoose;
+				if(isHideOhterChoose){
+                    transparentOtherChoose.setEnabled(false);
+                    hideOtherChoose.setSelected(true);
+                    hideOtherChoose.setText("显示其他");
+					scene.hideOtherChooseObject(selectedObject);
+				}else {
+                    transparentOtherChoose.setEnabled(true);
+                    hideOtherChoose.setSelected(false);
+                    hideOtherChoose.setText("隐藏其他");
+					scene.noHideOtherChooseObject(selectedObject);
+				}
+				break;
+			case R.id.transparent_other:
+				isTransparentOtherChoose = !isTransparentOtherChoose;
+				if(isTransparentOtherChoose){
+                    transparentOtherChoose.setText("恢复所选");
+                    transparentOtherChoose.setSelected(true);
+					scene.transparentOtherChooseObject(selectedObject);
+				}else {
+                    transparentOtherChoose.setText("透明所选");
+                    transparentOtherChoose.setSelected(false);
+					scene.noTransparentOtherChooseObject(selectedObject,SceneLoader.DEFAULT_COLOR);
+				}
+				break;
+			case R.id.change_choose_color:
+				LinearLayout layout = new LinearLayout(ModelActivity.this);
+				layout.setOrientation(LinearLayout.VERTICAL);
+
+				final TextView colorText = new TextView(ModelActivity.this);
+				ColorPickerView colorPick = new ColorPickerView(ModelActivity.this, Color.parseColor("#FFFFFF"), 0.8,colorText);
+
+				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT);
+				lp.gravity = Gravity.CENTER_HORIZONTAL;
+				layout.addView(colorPick, lp);
+				layout.addView(colorText,lp);
+				AlertDialog mAlertDialog = new AlertDialog.Builder(ModelActivity.this)
+						.setTitle("选择背景颜色")
+						.setView(layout)
+						.setPositiveButton(getString(R.string.dialog_color_OK), new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								String c = colorText.getText().toString().substring(1);
+								float r = Integer.parseInt(c.substring(0,2),16)/255.0f;
+								float g = Integer.parseInt(c.substring(2,4),16)/255.0f;
+								float b = Integer.parseInt(c.substring(4, 6),16)/255.0f;
+								scene.setSelectedObjectColor(selectedObject,new float[]{r,g,b,1.0f});
+							}
+						})
+						.setNegativeButton(getString(R.string.dialog_color_cancle), new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						}).show();
+				break;
+			case R.id.undo_choose_color:
+				scene.setSelectedObjectColor(selectedObject,SceneLoader.DEFAULT_COLOR);
+				break;
+			case R.id.sview_displaydialog_point:
+				scene.setPointWireframe();
+				break;
+			case R.id.sview_displaydialog_line:
+				scene.setLineWireframe();
+				break;
+			case R.id.sview_displaydialog_face:
+				scene.setFaceWireframe();
+				break;
+		}
+	}
 }

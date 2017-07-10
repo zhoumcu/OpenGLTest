@@ -4,8 +4,20 @@
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\drawable-xhdpi\\toolbar_button_style.xml"
     },
     {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\toolbar_button_transtyle.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\toolbar_button_transtyle.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\title_button_style.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\title_button_style.xml"
+    },
+    {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\title_button_style.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\drawable-xhdpi\\title_button_style.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\toolbar_transparent_style.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\toolbar_transparent_style.xml"
     },
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\toolbar_button_transtyle.xml",
@@ -14,6 +26,14 @@
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\toolbar_transparent_style.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\drawable-xhdpi\\toolbar_transparent_style.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\button_full.PNG",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\button_full.PNG"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\toolbar_button_style.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\drawable-xhdpi\\toolbar_button_style.xml"
     },
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\button_full.PNG",

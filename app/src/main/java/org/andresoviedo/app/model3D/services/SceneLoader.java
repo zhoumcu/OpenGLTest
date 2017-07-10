@@ -27,7 +27,7 @@ public class SceneLoader {
 	/**
 	 * Default model color: yellow
 	 */
-	private static float[] DEFAULT_COLOR = {1.0f, 1.0f, 0, 1.0f};
+	public static float[] DEFAULT_COLOR = {1.0f, 1.0f, 0, 1.0f};
 	/**
 	 * Parent component
 	 */
@@ -200,6 +200,22 @@ public class SceneLoader {
 		requestRender();
 	}
 
+	public void setPointWireframe(){
+		this.drawWireframe = false;
+		this.drawingPoints = true;
+		makeToastText("Points", Toast.LENGTH_SHORT);
+		requestRender();
+	}
+	public void setLineWireframe(){
+		makeToastText("Wireframe", Toast.LENGTH_SHORT);
+		this.drawWireframe = true;
+	}
+	public void setFaceWireframe(){
+		this.drawWireframe = false;
+		this.drawingPoints = false;
+		makeToastText("Faces", Toast.LENGTH_SHORT);
+		requestRender();
+	}
 	public boolean isDrawWireframe() {
 		return this.drawWireframe;
 	}
@@ -271,10 +287,64 @@ public class SceneLoader {
 		this.selectedObject = selectedObject;
 		if(selectedObject!=null){
 			selectedObject.setColor(new float[]{0.5f,0.3f,0.4f,0.3f});
-//			selectedObject.setPosition(new float[]{0,0,0});
-//			selectedObject.setScale(new float[]{1.0f,1.0f,1.0f});
 			requestRender();
 		}
 	}
 
+
+    public void hideChooseObject(Object3DData objectName) {
+        objectName.setVisible(false);
+        requestRender();
+    }
+
+    public void transparentChooseObject(Object3DData objectName) {
+        objectName.setColor(new float[]{0.5f,0.3f,0.4f,0.1f});
+        requestRender();
+    }
+
+    public void noHideChooseObject(Object3DData objectName) {
+        objectName.setVisible(true);
+        requestRender();
+    }
+
+    public void noTransparentChooseObject(Object3DData objectName,float[] defaultColor) {
+        objectName.setColor(defaultColor);
+        requestRender();
+    }
+
+    public void hideOtherChooseObject(Object3DData selectedObject) {
+        for (Object3DData object3DData : objects){
+            if (object3DData!=selectedObject){
+                hideChooseObject(object3DData);
+            }
+        }
+    }
+
+    public void transparentOtherChooseObject(Object3DData selectedObject) {
+        for (Object3DData object3DData : objects){
+            if (object3DData!=selectedObject){
+                transparentChooseObject(object3DData);
+            }
+        }
+    }
+    public void noHideOtherChooseObject(Object3DData selectedObject) {
+        for (Object3DData object3DData : objects){
+            if (object3DData!=selectedObject){
+                noHideChooseObject(object3DData);
+            }
+        }
+    }
+
+    public void noTransparentOtherChooseObject(Object3DData selectedObject,float[] defaultColor) {
+        for (Object3DData object3DData : objects){
+            if (object3DData!=selectedObject){
+                noTransparentChooseObject(object3DData,defaultColor);
+            }
+        }
+    }
+
+	public void setSelectedObjectColor(Object3DData selectedObject, float[] floats) {
+		selectedObject.setColor(floats);
+		requestRender();
+	}
 }

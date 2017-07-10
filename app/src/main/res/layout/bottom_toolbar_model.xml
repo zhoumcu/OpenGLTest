@@ -4,40 +4,70 @@
     android:layout_height="wrap_content"
     android:baselineAligned="true"
     android:background="@color/black_overlay"
-    android:orientation="horizontal">
-    <TextView
-        android:id="@+id/hide_choose"
-        android:text="隐藏所选"
-        android:padding="10dp"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/transparent_choose"
-        android:text="透明所选"
-        android:padding="10dp"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/transparent_other"
-        android:text="透明其他"
-        android:padding="10dp"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/hide_other"
-        android:text="隐藏其他"
-        android:layout_weight="1"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/undo"
-        android:text="撤销"
-        android:layout_weight="1"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/hide_choose"
+            android:text="隐藏所选"
+            android:padding="10dp"
+            android:textColor="@color/tab_selector"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/transparent_choose"
+            android:text="透明所选"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/tab_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/transparent_other"
+            android:text="透明其他"
+            android:padding="10dp"
+            android:textColor="@color/tab_selector"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/hide_other"
+            android:text="隐藏其他"
+            android:layout_weight="1"
+            android:textColor="@color/tab_selector"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/undo"
+            android:text="撤销"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textColor="@color/tab_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/change_choose_color"
+            android:text="修改颜色"
+            android:padding="10dp"
+            android:textColor="@color/tab_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/undo_choose_color"
+            android:text="恢复颜色"
+            android:padding="10dp"
+            android:textColor="@color/tab_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </LinearLayout>

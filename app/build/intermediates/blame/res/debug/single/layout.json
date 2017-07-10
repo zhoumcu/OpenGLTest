@@ -8,12 +8,24 @@
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_test.xml"
     },
     {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sview_toolbar_model.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\sview_toolbar_model.xml"
+    },
+    {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_text.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_text.xml"
     },
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo_item.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_demo_item.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_test.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_test.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sview_toolbar_model.xml",
@@ -24,6 +36,22 @@
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_menu.xml"
     },
     {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_demo.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_menu_item.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_menu_item.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bottom_toolbar_model.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\bottom_toolbar_model.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo_item.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_demo_item.xml"
+    },
+    {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_load_model.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\dialog_load_model.xml"
     },
@@ -32,8 +60,20 @@
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_menu_item.xml"
     },
     {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_model.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_model.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_text.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_text.xml"
+    },
+    {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_model.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_model.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_menu.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\activity_menu.xml"
     },
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
@@ -42,5 +82,9 @@
     {
         "merged": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
         "source": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\layout\\activity_demo.xml"
+    },
+    {
+        "merged": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_load_model.xml",
+        "source": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\layout\\dialog_load_model.xml"
     }
 ]

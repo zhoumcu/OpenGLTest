@@ -4,12 +4,15 @@
         <item>Load Model</item>
         <item>Models</item>
         <item>Demo</item>
-        <!-- <item>Settings</item> -->
+        
         <item>Help</item>
         <item>About</item>
         <item>Exit</item>
     </string-array>
     <color name="black_overlay">#66000000</color>
+    <color name="gray">#4d4c4c</color>
+    <color name="tab_select">#ce4213</color>
+    <color name="white">#ffffff</color>
     <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/></declare-styleable>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -222,15 +225,10 @@ www.hoteamsoft.com"</string>
     <string name="zhuangpei">装配</string>
     <string name="zoommode">缩放</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-        -->
+        
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
     </style>
     <style name="ButtonBar">
         <item name="android:paddingLeft">2dp</item>
