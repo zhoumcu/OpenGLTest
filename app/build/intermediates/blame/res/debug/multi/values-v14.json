@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "outputFile": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

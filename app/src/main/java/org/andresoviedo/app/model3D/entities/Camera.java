@@ -53,7 +53,7 @@ public class Camera {
 
 	public Camera() {
 		// Initialize variables...
-		this(0, 0, 2, 0, 0, -1, 0, 1, 0);
+		this(0, 0, 5, 0, 0, 0, 0, 1, 0);
 
 	}
 

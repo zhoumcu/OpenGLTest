@@ -96,11 +96,11 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 		// Enable blending for combining colors when there is transparency
 		GLES20.glEnable(GLES20.GL_BLEND);
-		GLES20.glEnable(GLES20.GL_LEQUAL);
-		GLES20.glHint(3152, 4354);
+//		GLES20.glEnable(GLES20.GL_LEQUAL);
+//		GLES20.glHint(3152, 4354);
 
-		gl10.glEnable(GL10.GL_LIGHTING);
-		gl10.glEnable(GL10.GL_LIGHT0);
+//		gl10.glEnable(GL10.GL_LIGHTING);
+//		gl10.glEnable(GL10.GL_LIGHT0);
 
 		GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
 
@@ -129,9 +129,9 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 				camera.zView, camera.xUp, camera.yUp, camera.zUp);
 
 		// the projection matrix is the 3D virtual space (cube) that we want to project
-		float ratio = (float) width / height;
+		float ratio = (float) width / height/5;
 		Log.d(TAG, "projection: [" + -ratio + "," + ratio + ",-1,1]-near/far[1,10]");
-		Matrix.frustumM(modelProjectionMatrix, 0, -ratio, ratio, -1, 1, getNear(), getFar());
+		Matrix.frustumM(modelProjectionMatrix, 0, -ratio, ratio, -0.2f, 0.2f, getNear(), getFar());
 
 		// Calculate the projection and view transformation
 		Matrix.multiplyMM(mvpMatrix, 0, modelProjectionMatrix, 0, modelViewMatrix, 0);
@@ -155,7 +155,7 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
 		SceneLoader scene = main.getModelActivity().getScene();
 		if (scene == null) {
-			// scene not ready
+			// scene not ready`
 			return;
 		}
 
@@ -184,10 +184,10 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 		for (int i=0; i<objects.size(); i++) {
 			try {
 				Object3DData objData = objects.get(i);
+				if (!objData.isVisible()) continue;
 				boolean changed = objData.isChanged();
-				Log.e("test","X:"+objData.getPositionX()+"Y:"+objData.getPositionY()+"Z:"+objData.getPositionZ());
 				Object3D drawerObject = drawer.getDrawer(objData, scene.isDrawTextures(), scene.isDrawLighting());
-				 Log.d("ModelRenderer","Drawing object using '"+drawerObject.getClass()+"'");
+//				 Log.d("ModelRenderer","Drawing object using '"+drawerObject.getClass()+"'");
 
 				Integer textureId = textures.get(objData.getTextureData());
 				if (textureId == null && objData.getTextureData() != null) {
@@ -263,7 +263,13 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 			centerToAll(objects);
 		}
 	}
-
+	public void setZoom(float zoom) {
+		// this projection matrix is applied to object coordinates
+		// in the onDrawFrame() method
+		float ratio = (float) width / height;
+		Matrix.frustumM(modelProjectionMatrix, 0, -ratio / zoom, ratio / zoom, -1
+				/ zoom, 1 / zoom, getNear(), getFar());
+	}
 	public void centerToAll(List<Object3DData> o3DList) {
 		float def = 0;
 		// calculate a scale factor
@@ -343,6 +349,15 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 		br = r;
 		bg = g;
 		bb = b;
+		main.requestRender();
+	}
+
+	public void hideChooseObject(Object3DData objectName) {
+		objectName.setVisible(false);
+		main.requestRender();
+	}
+	public void transparentChooseObject(Object3DData objectName) {
+		objectName.setColor(new float[]{0.5f,0.3f,0.4f,0.1f});
 		main.requestRender();
 	}
 }

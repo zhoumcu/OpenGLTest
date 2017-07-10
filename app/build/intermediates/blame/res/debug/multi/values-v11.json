@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "outputFile": "F:\\2017\\OpenGLTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "file": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 351
                 },
                 "from": {
-                    "file": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "file": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -54,7 +54,7 @@
                     "endOffset": 789
                 },
                 "from": {
-                    "file": "E:\\2017\\android-3D-model-viewer\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "file": "F:\\2017\\OpenGLTest\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,

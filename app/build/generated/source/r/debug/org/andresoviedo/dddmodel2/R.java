@@ -181,37 +181,44 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int transport=0x7f020066;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b001a;
+        public static final int action_settings=0x7f0b0021;
         public static final int activity_menu_item=0x7f0b0002;
-        public static final int browse_texture_button=0x7f0b000b;
-        public static final int camer=0x7f0b0011;
+        public static final int bottom_toolbar_model1=0x7f0b0009;
+        public static final int browse_texture_button=0x7f0b0012;
+        public static final int camer=0x7f0b0018;
         public static final int demo_item_icon=0x7f0b0000;
         public static final int demo_item_title=0x7f0b0001;
-        public static final int dialog_load_model_invert_textures=0x7f0b000c;
-        public static final int dialog_load_model_load=0x7f0b000d;
-        public static final int dialog_load_model_name=0x7f0b0009;
-        public static final int dialog_load_model_texture=0x7f0b000a;
-        public static final int frontcolor_set=0x7f0b000f;
-        public static final int geren=0x7f0b0019;
+        public static final int dialog_load_model_invert_textures=0x7f0b0013;
+        public static final int dialog_load_model_load=0x7f0b0014;
+        public static final int dialog_load_model_name=0x7f0b0010;
+        public static final int dialog_load_model_texture=0x7f0b0011;
+        public static final int frontcolor_set=0x7f0b0016;
+        public static final int geren=0x7f0b0020;
+        public static final int hide_choose=0x7f0b000b;
+        public static final int hide_other=0x7f0b000e;
         public static final int listview=0x7f0b0007;
+        public static final int main_bottom_toolbar=0x7f0b0008;
         public static final int main_view_content=0x7f0b0003;
         public static final int main_view_nofull=0x7f0b0004;
         public static final int main_view_toolbar=0x7f0b0005;
-        public static final int model_toggle_boundingbox=0x7f0b001e;
-        public static final int model_toggle_lights=0x7f0b001c;
-        public static final int model_toggle_textures=0x7f0b001d;
-        public static final int model_toggle_wireframe=0x7f0b001b;
-        public static final int sview_displaydialog_home=0x7f0b0016;
-        public static final int sview_displaydialog_onepointermove=0x7f0b0015;
-        public static final int sview_displaydialog_selrotate=0x7f0b0014;
-        public static final int sview_displaydialog_whichcamera=0x7f0b0010;
-        public static final int sview_modelbar_note=0x7f0b0017;
-        public static final int sview_modelbar_perspective=0x7f0b0012;
-        public static final int sview_titlebar_file=0x7f0b000e;
-        public static final int sview_titlebar_setting=0x7f0b0018;
+        public static final int model_toggle_boundingbox=0x7f0b0025;
+        public static final int model_toggle_lights=0x7f0b0023;
+        public static final int model_toggle_textures=0x7f0b0024;
+        public static final int model_toggle_wireframe=0x7f0b0022;
+        public static final int sview_displaydialog_home=0x7f0b001d;
+        public static final int sview_displaydialog_onepointermove=0x7f0b001c;
+        public static final int sview_displaydialog_selrotate=0x7f0b001b;
+        public static final int sview_displaydialog_whichcamera=0x7f0b0017;
+        public static final int sview_modelbar_note=0x7f0b001e;
+        public static final int sview_modelbar_perspective=0x7f0b0019;
+        public static final int sview_titlebar_file=0x7f0b0015;
+        public static final int sview_titlebar_setting=0x7f0b001f;
         public static final int sview_toolbar_model1=0x7f0b0006;
-        public static final int text_activity_text=0x7f0b0008;
-        public static final int transport=0x7f0b0013;
+        public static final int text_activity_text=0x7f0b000a;
+        public static final int transparent_choose=0x7f0b000c;
+        public static final int transparent_other=0x7f0b000d;
+        public static final int transport=0x7f0b001a;
+        public static final int undo=0x7f0b000f;
     }
     public static final class layout {
         public static final int activity_demo=0x7f030000;
@@ -222,8 +229,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_model=0x7f030005;
         public static final int activity_test=0x7f030006;
         public static final int activity_text=0x7f030007;
-        public static final int dialog_load_model=0x7f030008;
-        public static final int sview_toolbar_model=0x7f030009;
+        public static final int bottom_toolbar_model=0x7f030008;
+        public static final int dialog_load_model=0x7f030009;
+        public static final int sview_toolbar_model=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

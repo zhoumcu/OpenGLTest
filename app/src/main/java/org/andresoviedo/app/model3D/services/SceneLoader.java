@@ -254,16 +254,17 @@ public class SceneLoader {
 		return selectedObject;
 	}
 
-	public void setSelectedObjectByID(String selectedObjectId) {
+	public Object3DData setSelectedObjectByID(String selectedObjectId) {
 		for (Object3DData object3DData : objects){
 			Log.e("Object3DData","选中："+selectedObjectId+"实际："+object3DData.getId());
 			if (object3DData.getId().contains(selectedObjectId)){
 				this.selectedObject = object3DData;
-				object3DData.setColor(new float[]{0.5f,0.3f,0.4f,0.3f});
+//				object3DData.setColor(new float[]{0.5f,0.3f,0.4f,0.3f});
 				requestRender();
-				break;
+				return object3DData;
 			}
 		}
+		return null;
 	}
 
 	public void setSelectedObject(Object3DData selectedObject) {

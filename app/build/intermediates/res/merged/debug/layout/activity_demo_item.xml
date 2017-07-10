@@ -4,8 +4,8 @@
     android:layout_height="wrap_content" >
     <ImageView
         android:id="@+id/demo_item_icon"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:contentDescription="@string/image"
         android:paddingLeft="4dp"
         android:paddingRight="4dp" />
@@ -18,6 +18,6 @@
         android:paddingBottom="4dp"
         android:background="#000000"
         android:textColor="#ffffff"
-        android:textSize="32sp" />
+        android:textSize="18sp" />
         
 </RelativeLayout>
