@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jul 07 16:54:54 CST 2017
+#Fri Jul 07 17:33:20 CST 2017
 122.file=E\:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\assets\\debug\\ic_launcher.gif
 60.set=ANDROID_RESOURCE
 129.file=E\:\\2017\\android-3D-model-viewer\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\geren.png
